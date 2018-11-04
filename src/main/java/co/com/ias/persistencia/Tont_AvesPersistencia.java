@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 
 import co.com.ias.Exception.ExamenException;
+import co.com.ias.dominio.Tont_Aves;
 import co.com.ias.entidad.Tont_AvesEntidad;
 import co.com.ias.repositorioJPA.Tont_AvesRepositorio;
 
@@ -16,8 +17,9 @@ public class Tont_AvesPersistencia {
 	@Autowired
 	Tont_AvesRepositorio tont_AvesRepositorio;
 	
-	public void crearAve(Tont_AvesEntidad tont_Aves) {
-		tont_AvesRepositorio.save(tont_Aves);
+	public void crearAve(Tont_Aves tont_Aves) {
+		Tont_AvesEntidad tont_AvesEntidad = new Tont_AvesEntidad();
+		tont_AvesRepositorio.save(tont_AvesEntidad);
 	}
 	
 	public Tont_AvesEntidad actualizarAve(Tont_AvesEntidad tont_Aves,String id)

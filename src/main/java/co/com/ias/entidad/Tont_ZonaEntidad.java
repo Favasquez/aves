@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class Tont_ZonaEntidad {
 	
 	@Id
-	@GeneratedValue (strategy=GenerationType.AUTO )
+	@GeneratedValue
 	private String cdZona;
 	@Column
 	private String dsNombre;
