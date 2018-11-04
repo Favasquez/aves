@@ -4,16 +4,22 @@ package co.com.ias.entidad;
 import java.util.Set;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity(name="Tont_Aves")
 
 public class Tont_AvesEntidad {
 	
 	@Id
-	@GeneratedValue( strategy=GenerationType.AUTO )
+	@GenericGenerator(name = "sequence_av_id", strategy = "co.com.ias.entidad.GenerateId")
+    @GeneratedValue(generator = "sequence_av_id")
 	private String cdave;
+	@NotNull
 	@Column
 	private String dsNombre_Comun;
+	@NotNull
 	@Column
 	private String dsNombre_Cientifico;
 	@ManyToMany(cascade = CascadeType.ALL)
