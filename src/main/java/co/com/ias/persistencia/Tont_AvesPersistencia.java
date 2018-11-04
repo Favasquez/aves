@@ -27,9 +27,10 @@ public class Tont_AvesPersistencia {
 		Optional<Tont_AvesEntidad> opcionAve = tont_AvesRepositorio.findById(id);
 		if (!opcionAve.isPresent())
 			throw new ExamenException("NO SE HA ENCONTRADO AVES");
-			tont_Aves.setCdave(id);
-			tont_AvesRepositorio.save(tont_Aves);
-			return tont_Aves;
+
+		tont_Aves.setCdave(id);
+		tont_AvesRepositorio.save(tont_Aves);
+		return tont_Aves;
 
 	}
 	
