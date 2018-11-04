@@ -7,7 +7,7 @@ public class Tont_Aves {
 	private String cdave;
 	private String dsNombre_Comun;
 	private String dsNombre_Cientifico;
-	private Tont_Paises tont_Paises;
+	private Set<Tont_Paises> tont_Paises;
 	
 	
 	
@@ -16,7 +16,7 @@ public class Tont_Aves {
 	}
 	
 	
-	public Tont_Aves(String cdave, String dsNombre_Comun, String dsNombre_Cientifico, Tont_Paises tont_Paises) {
+	public Tont_Aves(String cdave, String dsNombre_Comun, String dsNombre_Cientifico, Set<Tont_Paises> tont_Paises) {
 		super();
 		this.cdave = cdave;
 		this.dsNombre_Comun = dsNombre_Comun;
@@ -45,12 +45,12 @@ public class Tont_Aves {
 	}
 
 
-	public Tont_Paises getTont_Paises() {
+	public Set<Tont_Paises> getTont_Paises() {
 		return tont_Paises;
 	}
 
 
-	public void setTont_Paises(Tont_Paises tont_Paises) {
+	public void setTont_Paises(Set<Tont_Paises> tont_Paises) {
 		this.tont_Paises = tont_Paises;
 	}
 

@@ -1,10 +1,12 @@
 package co.com.ias.dominio;
 
+import java.util.Set;
+
 public class Tont_Zona {
 	
 	private String cdZona;
 	private String dsNombre;
-	private Tont_Paises tont_Paises;
+	private Set<Tont_Paises> tont_Paises;
 	
 	
 	public Tont_Zona() {
@@ -29,15 +31,15 @@ public class Tont_Zona {
 		this.dsNombre = dsNombre;
 	}
 
-	public Tont_Paises getTont_Paises() {
+	public Set<Tont_Paises> getTont_Paises() {
 		return tont_Paises;
 	}
 
-	public void setTont_Paises(Tont_Paises tont_Paises) {
+	public void setTont_Paises(Set<Tont_Paises> tont_Paises) {
 		this.tont_Paises = tont_Paises;
 	}
 
-	public Tont_Zona(String cdZona, String dsNombre,Tont_Paises tont_Paises) {
+	public Tont_Zona(String cdZona, String dsNombre,Set<Tont_Paises> tont_Paises) {
 		super();
 		this.cdZona = cdZona;
 		this.dsNombre = dsNombre;

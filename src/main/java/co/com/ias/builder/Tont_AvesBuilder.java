@@ -2,7 +2,6 @@ package co.com.ias.builder;
 
 import co.com.ias.dominio.Tont_Aves;
 import co.com.ias.entidad.Tont_AvesEntidad;
-import co.com.ias.entidad.Tont_PaisesEntidad;
 
 
 public class Tont_AvesBuilder {
@@ -16,11 +15,13 @@ public class Tont_AvesBuilder {
 				tont_PaisesBuilder.convertiraDomain(tont_AvesEntidad.getTont_Paises()));
 	}
 	
-	public Tont_Aves convertiraEntity(Tont_Aves tont_Aves) {
-		return new Tont_Aves(tont_Aves.getCdave(), 
-				tont_Aves.getDsNombre_Comun(),
-				tont_Aves.getDsNombre_Comun(),
-				tont_PaisesBuilder.convertiraEntity(tont_Aves.getTont_Paises()));
+	public Tont_AvesEntidad convertiraEntity(Tont_Aves tont_Aves) {
+		Tont_AvesEntidad aveEntidad = new Tont_AvesEntidad();
+		aveEntidad.setCdave(tont_Aves.getCdave());
+		aveEntidad.setDsNombre_Comun(tont_Aves.getDsNombre_Comun());
+		aveEntidad.setDsNombre_Cientifico(tont_Aves.getDsNombre_Cientifico());
+		aveEntidad.setTont_Paises(tont_PaisesBuilder.convertiraEntity(tont_Aves.getTont_Paises()));
+		return aveEntidad;
 	}
 
 }
