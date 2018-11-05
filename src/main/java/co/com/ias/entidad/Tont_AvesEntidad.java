@@ -24,7 +24,10 @@ public class Tont_AvesEntidad {
 	@NotNull
 	@Column
 	private String dsNombre_Cientifico;
-	@ManyToMany(mappedBy = "tont_Aves")
+	@ManyToMany(cascade = CascadeType.MERGE)
+	@JoinTable(name = "Tont_Aves_Pais", joinColumns = 
+	@JoinColumn (name = "cdave", referencedColumnName = "cdave") , inverseJoinColumns = 
+	@JoinColumn(name = "cdPais", referencedColumnName = "cdPais"))
 	private List<Tont_PaisesEntidad> tont_Paises;
 	
 	public String getCdave() {

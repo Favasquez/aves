@@ -3,7 +3,13 @@ package co.com.ias.controlador;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import co.com.ias.dominio.Tont_Aves;
 import co.com.ias.servicio.Tont_AvesServicio;
@@ -29,11 +35,12 @@ public class Tont_AvesControlador {
 	public void eliminarAve(@PathVariable String id) {
 		tont_AvesServicio.eliminarAve(id);
 	}
-	
-	@GetMapping("/registros")
+
+	@GetMapping("/registros/ave")
     public List<Tont_Aves> registros(){
     	return tont_AvesServicio.registrosAve();
     }
+
 	
 	
 }

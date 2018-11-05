@@ -15,13 +15,11 @@ public class Tont_PaisesEntidad {
 	private String cdPais;
 	@Column
 	private String dsNombre;
-	@ManyToOne(fetch = FetchType.LAZY , cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "cdZona")
 	private Tont_ZonaEntidad tont_Zona;
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "Tont_Aves_Pais", joinColumns = 
-	@JoinColumn(name = "cdPais", referencedColumnName = "cdPais"), inverseJoinColumns = 
-	@JoinColumn(name = "cdave", referencedColumnName = "cdave"))
+	@ManyToMany(mappedBy = "tont_Paises")
+	
 	private List<Tont_AvesEntidad> tont_Aves;
 
 	public String getCdPais() {

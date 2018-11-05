@@ -42,11 +42,11 @@ public class Tont_Zona {
 		this.tont_Paises = tont_Paises;
 	}
 
-	public Tont_Zona(String cdZona, String dsNombre, List<Tont_Paises> tont_Paises) {
+	public Tont_Zona(String cdZona, String dsNombre) {
 		super();
 		this.cdZona = cdZona;
 		this.dsNombre = dsNombre;
-		this.tont_Paises = tont_Paises;
+		
 	}
 
 

@@ -14,9 +14,7 @@ public class Tont_ZonaEntidad {
 	private String cdZona;
 	@Column
 	private String dsNombre;
-	@OneToMany(mappedBy = "tont_Zona", cascade = CascadeType.ALL)
-	private List<Tont_PaisesEntidad> tont_Paises;
-	
+
 	public String getCdZona() {
 		return cdZona;
 	}
@@ -29,10 +27,5 @@ public class Tont_ZonaEntidad {
 	public void setDsNombre(String dsNombre) {
 		this.dsNombre = dsNombre;
 	}
-	public List<Tont_PaisesEntidad> getTont_Paises() {
-		return tont_Paises;
-	}
-	public void setTont_Paises(List<Tont_PaisesEntidad> tont_Paises) {
-		this.tont_Paises = tont_Paises;
-	}
+	
 }
