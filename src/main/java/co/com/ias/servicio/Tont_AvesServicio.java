@@ -1,5 +1,8 @@
 package co.com.ias.servicio;
 
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,5 +19,15 @@ public class Tont_AvesServicio {
     	tont_AvesPersistencia.crearAve(tont_Aves);
 	}
 		
-
+		public void actualizarAve(Tont_Aves tont_Aves,String cdave) {
+	    	tont_AvesPersistencia.actualizarAve(tont_Aves, cdave);
+		}
+		
+		public void eliminarAve(String cdave) {
+			tont_AvesPersistencia.eliminarAve(cdave);
+		}
+		
+		public List<Tont_Aves>registrosAve() {
+		    return tont_AvesPersistencia.list();	
+		}
 }
