@@ -1,12 +1,15 @@
 package co.com.ias.entidad;
 
-
 import java.util.List;
-import java.util.Set;
 
-import javax.persistence.*;
-
-import org.hibernate.annotations.GenericGenerator;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 @Entity(name = "Tont_Paises")
 public class Tont_PaisesEntidad {
@@ -18,8 +21,7 @@ public class Tont_PaisesEntidad {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "cdZona")
 	private Tont_ZonaEntidad tont_Zona;
-	@ManyToMany(mappedBy = "tont_Paises")
-	
+	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "tont_Paises")
 	private List<Tont_AvesEntidad> tont_Aves;
 
 	public String getCdPais() {
@@ -54,5 +56,4 @@ public class Tont_PaisesEntidad {
 		this.tont_Aves = tont_Aves;
 	}
 
-	
 }

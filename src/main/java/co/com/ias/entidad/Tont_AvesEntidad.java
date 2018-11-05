@@ -2,12 +2,10 @@ package co.com.ias.entidad;
 
 
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity(name="Tont_Aves")
@@ -24,7 +22,7 @@ public class Tont_AvesEntidad {
 	@NotNull
 	@Column
 	private String dsNombre_Cientifico;
-	@ManyToMany(cascade = CascadeType.MERGE)
+	@ManyToMany(fetch = FetchType.LAZY,cascade = {CascadeType.MERGE})
 	@JoinTable(name = "Tont_Aves_Pais", joinColumns = 
 	@JoinColumn (name = "cdave", referencedColumnName = "cdave") , inverseJoinColumns = 
 	@JoinColumn(name = "cdPais", referencedColumnName = "cdPais"))

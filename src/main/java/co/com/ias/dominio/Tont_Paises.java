@@ -1,8 +1,11 @@
 package co.com.ias.dominio;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Tont_Paises {
 	private String cdPais;
 	private String dsNombre;
+	@JsonProperty
 	private Tont_Zona tont_Zona;
 
 	public Tont_Paises() {

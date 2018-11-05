@@ -9,8 +9,6 @@ public class Tont_Aves {
 	private String cdave;
 	private String dsNombre_Comun;
 	private String dsNombre_Cientifico;
-	
-	@JsonProperty
 	private List<Tont_Paises> tont_Paises;
 	
 	public Tont_Aves() {
