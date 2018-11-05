@@ -7,11 +7,9 @@ import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SharedSessionContractImplementor;
 import org.hibernate.id.IdentifierGenerator;
 
-public class GenerateId  implements IdentifierGenerator {
+public class GenerateId {
 
-	@Override
-	public Serializable generate(SharedSessionContractImplementor session, Object object) throws HibernateException {
+	public Serializable generate() throws HibernateException {
 			return "AV"+ UUID.randomUUID().toString();
 	}
-
 }

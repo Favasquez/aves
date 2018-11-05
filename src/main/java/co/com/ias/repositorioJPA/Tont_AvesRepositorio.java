@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import co.com.ias.entidad.Tont_AvesEntidad;
 
-public interface Tont_AvesRepositorio extends JpaRepository<Tont_AvesEntidad,String> {
+public interface Tont_AvesRepositorio extends JpaRepository<Tont_AvesEntidad, String> {
 
 	
 }

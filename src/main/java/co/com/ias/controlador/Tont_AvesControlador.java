@@ -8,12 +8,12 @@ import co.com.ias.servicio.Tont_AvesServicio;
 
 @RestController
 public class Tont_AvesControlador {
-	
-@Autowired
-Tont_AvesServicio tont_AvesServicio;
-	
- @PostMapping("/crear/ave")
-    public void crearAve(@RequestBody Tont_Aves tont_Aves) {
-    	tont_AvesServicio.crearAve(tont_Aves);
-    }
+
+	@Autowired
+	Tont_AvesServicio tont_AvesServicio;
+
+	@PostMapping("/crear/ave")
+	public void crearAve(@RequestBody Tont_Aves tont_Aves) {
+		tont_AvesServicio.crearAve(tont_Aves);
+	}
 }

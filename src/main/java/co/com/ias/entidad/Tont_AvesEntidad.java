@@ -1,20 +1,22 @@
 package co.com.ias.entidad;
 
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity(name="Tont_Aves")
-
 public class Tont_AvesEntidad {
 	
 	@Id
-	@GenericGenerator(name = "sequence_av_id", strategy = "co.com.ias.entidad.GenerateId")
-    @GeneratedValue(generator = "sequence_av_id")
+	@Column(length = 32)
+	@GeneratedValue(generator = "system-uuid")
+	@GenericGenerator(name = "system-uuid", strategy = "uuid")	
 	private String cdave;
 	@NotNull
 	@Column
@@ -26,7 +28,7 @@ public class Tont_AvesEntidad {
 	@JoinTable(name = "Tont_Aves_Pais", joinColumns = 
 	@JoinColumn(name = "cdave", referencedColumnName = "cdave"), inverseJoinColumns = 
 	@JoinColumn(name = "cdPais", referencedColumnName = "cdPais"))
-	private Set<Tont_PaisesEntidad> tont_Paises;
+	private List<Tont_PaisesEntidad> tont_Paises;
 	
 	public String getCdave() {
 		return cdave;
@@ -42,7 +44,6 @@ public class Tont_AvesEntidad {
 		this.dsNombre_Cientifico = dsNombre_Cientifico;
 	}
 
-
 	public String getDsNombre_Comun() {
 		return dsNombre_Comun;
 	}
@@ -50,14 +51,10 @@ public class Tont_AvesEntidad {
 	public void setDsNombre_Comun(String dsNombre_Comun) {
 		this.dsNombre_Comun = dsNombre_Comun;
 	}
-	public Set<Tont_PaisesEntidad> getTont_Paises() {
+	public List<Tont_PaisesEntidad> getTont_Paises() {
 		return tont_Paises;
 	}
-	public void setTont_Paises(Set<Tont_PaisesEntidad> tont_Paises) {
+	public void setTont_Paises(List<Tont_PaisesEntidad> tont_Paises) {
 		this.tont_Paises = tont_Paises;
 	}
-
-
-
-	
 }

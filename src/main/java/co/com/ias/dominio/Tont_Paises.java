@@ -1,11 +1,10 @@
 package co.com.ias.dominio;
 
-	public class Tont_Paises {
+public class Tont_Paises {
 	private String cdPais;
 	private String dsNombre;
 	private Tont_Zona tont_Zona;
-	
-	
+
 	public Tont_Paises() {
 		super();
 	}
@@ -40,6 +39,4 @@ package co.com.ias.dominio;
 	public void setTont_Zona(Tont_Zona tont_Zona) {
 		this.tont_Zona = tont_Zona;
 	}
-
-	
 }

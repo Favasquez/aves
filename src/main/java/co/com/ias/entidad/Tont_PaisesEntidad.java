@@ -1,15 +1,17 @@
 package co.com.ias.entidad;
 
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.*;
+
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity(name = "Tont_Paises")
 public class Tont_PaisesEntidad {
 
 	@Id
-	@GeneratedValue
 	private String cdPais;
 	@Column
 	private String dsNombre;
@@ -17,7 +19,7 @@ public class Tont_PaisesEntidad {
 	@JoinColumn(name = "cdZona")
 	private Tont_ZonaEntidad tont_Zona;
 	@ManyToMany(mappedBy = "tont_Paises")
-	private Set<Tont_AvesEntidad> tont_Aves;
+	private List<Tont_AvesEntidad> tont_Aves;
 
 	public String getCdPais() {
 		return cdPais;
@@ -43,11 +45,11 @@ public class Tont_PaisesEntidad {
 		this.tont_Zona = tont_Zona;
 	}
 
-	public Set<Tont_AvesEntidad> getTont_Aves() {
+	public List<Tont_AvesEntidad> getTont_Aves() {
 		return tont_Aves;
 	}
 
-	public void setTont_Aves(Set<Tont_AvesEntidad> tont_Aves) {
+	public void setTont_Aves(List<Tont_AvesEntidad> tont_Aves) {
 		this.tont_Aves = tont_Aves;
 	}
 

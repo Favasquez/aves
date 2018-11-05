@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 
 import co.com.ias.Exception.ExamenException;
+import co.com.ias.builder.Tont_AvesBuilder;
 import co.com.ias.dominio.Tont_Aves;
 import co.com.ias.entidad.Tont_AvesEntidad;
 import co.com.ias.repositorioJPA.Tont_AvesRepositorio;
@@ -18,8 +19,7 @@ public class Tont_AvesPersistencia {
 	Tont_AvesRepositorio tont_AvesRepositorio;
 	
 	public void crearAve(Tont_Aves tont_Aves) {
-		Tont_AvesEntidad tont_AvesEntidad = new Tont_AvesEntidad();
-		tont_AvesRepositorio.save(tont_AvesEntidad);
+		tont_AvesRepositorio.save(Tont_AvesBuilder.convertiraEntity(tont_Aves));
 	}
 	
 	public Tont_AvesEntidad actualizarAve(Tont_AvesEntidad tont_Aves,String id)
@@ -34,9 +34,9 @@ public class Tont_AvesPersistencia {
 
 	}
 	
-	public void eliminarAve(String cdave) {
+	/*public void eliminarAve(String cdave) {
 		tont_AvesRepositorio.deleteById(cdave);
-	}
+	}*/
 	
 	
 

@@ -1,12 +1,15 @@
 package co.com.ias.dominio;
 
-import java.util.Set;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Tont_Zona {
 	
 	private String cdZona;
 	private String dsNombre;
-	private Set<Tont_Paises> tont_Paises;
+	@JsonProperty
+	private List<Tont_Paises> tont_Paises;
 	
 	
 	public Tont_Zona() {
@@ -31,15 +34,15 @@ public class Tont_Zona {
 		this.dsNombre = dsNombre;
 	}
 
-	public Set<Tont_Paises> getTont_Paises() {
+	public List<Tont_Paises> getTont_Paises() {
 		return tont_Paises;
 	}
 
-	public void setTont_Paises(Set<Tont_Paises> tont_Paises) {
+	public void setTont_Paises(List<Tont_Paises> tont_Paises) {
 		this.tont_Paises = tont_Paises;
 	}
 
-	public Tont_Zona(String cdZona, String dsNombre,Set<Tont_Paises> tont_Paises) {
+	public Tont_Zona(String cdZona, String dsNombre, List<Tont_Paises> tont_Paises) {
 		super();
 		this.cdZona = cdZona;
 		this.dsNombre = dsNombre;
