@@ -11,6 +11,7 @@ public class Tont_AvesServicio {
 	
 	@Autowired
 	Tont_AvesPersistencia tont_AvesPersistencia;
+	
 		public void crearAve(Tont_Aves tont_Aves) {
     	tont_AvesPersistencia.crearAve(tont_Aves);
 	}

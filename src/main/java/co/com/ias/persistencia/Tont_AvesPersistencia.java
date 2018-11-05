@@ -3,6 +3,7 @@ package co.com.ias.persistencia;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 
@@ -12,13 +13,14 @@ import co.com.ias.dominio.Tont_Aves;
 import co.com.ias.entidad.Tont_AvesEntidad;
 import co.com.ias.repositorioJPA.Tont_AvesRepositorio;
 
-@Service
+@Component
 public class Tont_AvesPersistencia {
 	
 	@Autowired
 	Tont_AvesRepositorio tont_AvesRepositorio;
 	
 	public void crearAve(Tont_Aves tont_Aves) {
+		
 		tont_AvesRepositorio.save(Tont_AvesBuilder.convertiraEntity(tont_Aves));
 	}
 	
