@@ -30,4 +30,14 @@ public class Tont_AvesServicio {
 		public List<Tont_Aves>registrosAve() {
 		    return tont_AvesPersistencia.list();	
 		}
+		
+		public Tont_Aves busquedaPornombre(String nombre ) {
+			return tont_AvesPersistencia.busquedaPorNombre(nombre);
+			
+		}
+		
+		public List<Tont_Aves> busquedaPorZona(String zona ) {
+			return tont_AvesPersistencia.busquedaPorZona(zona);
+			
+		}
 }

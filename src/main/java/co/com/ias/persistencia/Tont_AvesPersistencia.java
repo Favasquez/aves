@@ -52,4 +52,17 @@ public class Tont_AvesPersistencia {
 		tont_Aves.add(Tont_AvesBuilder.convertiraDomain(tont_AvesEntidad)));
 		return tont_Aves;
 	}
+	
+	public Tont_Aves busquedaPorNombre(String nombre) {
+		Tont_AvesEntidad tont_Aves = tont_AvesRepositorio.findNamesAndNames(nombre);
+		return Tont_AvesBuilder.convertiraDomain(tont_Aves);
+	
+}
+	public List<Tont_Aves> busquedaPorZona(String zona) {
+		List<Tont_Aves> tont_Aves = new ArrayList<>();
+		tont_AvesRepositorio.findNombreAndZona(zona).forEach(tont_AvesEntidad -> 
+		tont_Aves.add(Tont_AvesBuilder.convertiraDomain(tont_AvesEntidad)));
+		return tont_Aves;
+	
+}
 }
