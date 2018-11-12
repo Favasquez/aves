@@ -31,13 +31,9 @@ public class Tont_AvesPersistencia {
 		tont_Aves.setCdave(id);
 		tont_AvesRepositorio.save(tont_Aves);
 		return tont_Aves;
-
 	}
 	
-	/*public void eliminarAve(String cdave) {
+	public void eliminarAve(String cdave) {
 		tont_AvesRepositorio.deleteById(cdave);
-	}*/
-	
-	
-
+	}
 }
