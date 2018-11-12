@@ -15,7 +15,7 @@ public class Tont_ZonaControlador {
 	@Autowired
 	Tont_ZonaServicio tont_ZonaServicio;
 	
-	@GetMapping("/registros/zona")
+	@GetMapping("/zona")
     public List<Tont_Zona> registros(){
     	return tont_ZonaServicio.registrosZonas();
     }

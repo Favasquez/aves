@@ -9,6 +9,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity(name="Tont_Aves")
+
 public class Tont_AvesEntidad {
 	
 	@Id

@@ -16,7 +16,7 @@ import co.com.ias.dominio.Tont_Aves;
 import co.com.ias.servicio.Tont_AvesServicio;
 
 
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class Tont_AvesControlador {
 

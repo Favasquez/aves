@@ -16,7 +16,7 @@ public class Tont_PaisesControlador {
 	Tont_PaisesServicio tont_PaisesServicio;
 	
 	
-	@GetMapping("/registros/paises")
+	@GetMapping("/paises")
     public List<Tont_Paises> registros(){
     	return tont_PaisesServicio.registrosPaises();
     }

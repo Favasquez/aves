@@ -1,11 +1,8 @@
 package co.com.ias.entidad;
 
-import java.util.List;
-import java.util.Set;
-
-import javax.persistence.*;
-
-import org.hibernate.annotations.GenericGenerator;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity(name="Tont_Zona")
 public class Tont_ZonaEntidad {
